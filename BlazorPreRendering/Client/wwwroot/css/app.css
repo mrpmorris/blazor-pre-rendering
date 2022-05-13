@@ -1,5 +1,40 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+
+.pre-renderer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2147483647;
+}
+
+    .pre-renderer > .loader {
+        border: 6px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -32px;
+        margin-left: -32px;
+        width: 64px;
+        height: 64px;
+        animation: pre-renderer-loader-spin 1s linear infinite;
+    }
+
+@keyframes pre-renderer-loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
